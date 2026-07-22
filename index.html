@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz App</title>
+<title>KENT Prelim Reviewer Exam</title>
 
 <style>
 *{
@@ -18,7 +18,8 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    min-height:100vh;
+    padding:20px;
 }
 
 .container{
@@ -93,13 +94,25 @@ header{
     font-weight:bold;
 }
 
-#next{
+#next, #continueBtn, #restartBtn{
     padding:12px 25px;
-    background:#4b2fa5;
     color:white;
     border:none;
     border-radius:5px;
     cursor:pointer;
+    margin-top:15px;
+}
+
+#next, #continueBtn{
+    background:#4b2fa5;
+}
+
+#restartBtn{
+    background:#E53935;
+    margin-left:10px;
+}
+
+#next{
     display:none;
 }
 </style>
@@ -110,7 +123,7 @@ header{
 <div class="container">
 
     <header>
-        Prelim Reviewer Exam
+       KENT Prelim Reviewer Exam
     </header>
 
     <div class="quiz">
