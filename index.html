@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KENT Prelim Reviewer Exam</title>
+<title>Prelim Reviewer Exam</title>
 
 <style>
 *{
@@ -43,23 +43,30 @@ header{
     padding:30px;
 }
 
-#question{
-    font-size:22px;
-    margin-bottom:25px;
-}
-
-.choice{
+.subject-btn, .choice, #next, #restartBtn{
     display:block;
     width:100%;
     padding:15px;
     margin:12px 0;
-    background:#eee;
     border:none;
     border-radius:6px;
     cursor:pointer;
-    text-align:left;
     font-size:17px;
     transition:.3s;
+}
+
+.subject-btn{
+    background:#4b2fa5;
+    color:white;
+}
+
+.subject-btn:hover{
+    background:#3a2380;
+}
+
+.choice{
+    background:#eee;
+    text-align:left;
 }
 
 .choice:hover{
@@ -76,44 +83,27 @@ header{
     color:white;
 }
 
-#feedback{
-    margin-top:15px;
-    font-size:18px;
-    font-weight:bold;
+#next{
+    background:#4b2fa5;
+    color:white;
+    display:none;
 }
 
-.bottom{
-    margin-top:25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+#restartBtn{
+    background:#E53935;
+    color:white;
 }
 
 #score{
     font-size:18px;
     font-weight:bold;
+    margin-top:20px;
 }
 
-#next, #continueBtn, #restartBtn{
-    padding:12px 25px;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+#feedback{
     margin-top:15px;
-}
-
-#next, #continueBtn{
-    background:#4b2fa5;
-}
-
-#restartBtn{
-    background:#E53935;
-    margin-left:10px;
-}
-
-#next{
-    display:none;
+    font-size:18px;
+    font-weight:bold;
 }
 </style>
 
@@ -123,21 +113,28 @@ header{
 <div class="container">
 
     <header>
-       PUTANGINA NIYO PAG KINALAT
+        Prelim Reviewer Exam
     </header>
 
-    <div class="quiz">
+    <div class="quiz" id="quiz">
+
+        <h2>Choose a Subject</h2>
+
+        <button class="subject-btn" onclick="startSubject(0)">CC106</button>
+        <button class="subject-btn" onclick="startSubject(1)">IAS101</button>
+        <button class="subject-btn" onclick="startSubject(2)">PM101</button>
+        <button class="subject-btn" onclick="startSubject(3)">ITE3</button>
+        <button class="subject-btn" onclick="startSubject(4)">IM101</button>
+
+        <hr style="margin:20px 0;">
 
         <h2 id="question"></h2>
-
         <div id="choices"></div>
-
         <div id="feedback"></div>
 
-        <div class="bottom">
-            <div id="score">Score: 0</div>
-            <button id="next">Next</button>
-        </div>
+        <div id="score">Score: 0/50</div>
+
+        <button id="next">Next</button>
 
     </div>
 
