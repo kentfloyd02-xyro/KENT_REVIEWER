@@ -1917,13 +1917,13 @@ function selectAnswer(index) {
 
   if (index === q.c) {
     buttons[index].classList.add("correct");
-    feedbackEl.innerHTML = "<p class='correct'>Correct!</p>";
+    feedbackEl.innerHTML = "<p class='correct'>GALING AH KUPALOGS!</p>";
     score++;
   } else {
     buttons[index].classList.add("wrong");
     buttons[q.c].classList.add("correct");
 
-    feedbackEl.innerHTML = `<p class='wrong'>Wrong! Correct answer:
+    feedbackEl.innerHTML = `<p class='wrong'> BOBO MALI WHAHAHAHA! ETO TAMANG SAGOT ENGOT:
              ${String.fromCharCode(65 + q.c)}. ${q.a[q.c]}</p>`;
   }
 
